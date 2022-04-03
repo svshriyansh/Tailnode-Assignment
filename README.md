@@ -1,6 +1,16 @@
 <h1 align ="center">
   Tailnode-Assignment
 </h1>
+
+## Prerequisites
+
+> .env
+> Create a .env file inside both folders i.e. Part A and Part B and save your MongoDB credentials in it as
+>>
+```
+DB_PASSWORD=your_password
+DB_USER=your_username
+```
   
  <h3 align ="center">
    Part A
