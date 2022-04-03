@@ -8,11 +8,15 @@
 
 ## Run Command
 > 
-> ```pip3 install -r requirements.txt```
+```
+  pip3 install -r requirements.txt 
+```
 
 ## To run script
 > 
-> ```python3 script.py```
+ ```
+   python3 script.py 
+```
 
 
  <h3 align ="center">
@@ -21,11 +25,15 @@
  
 ## Run command
 > 
->```pip3 install -r requirements.txt```
+```
+  pip3 install -r requirements.txt 
+```
 
 ## To run script
 > 
->```python3 script.py```
+```
+  python3 script.py 
+```
 
 ## **Mongodb Snapshots** 
 
