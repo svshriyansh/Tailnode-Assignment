@@ -46,7 +46,7 @@ def book_data(soup):
 def scrap(collection):
     start = 1
     last_page = 51
-    table = collection['data']
+    table = collection['Book data']
     delete_collecion(table)
     max_bars_count = 20
     spaces = f"%-{max_bars_count}s"
