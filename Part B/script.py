@@ -3,10 +3,15 @@ import requests
 from pymongo import MongoClient
 import certifi
 import sys
+import os
+from dotenv import load_dotenv 
+load_dotenv()
 
 def get_database():
-
-    CONNECTION_STRING = "mongodb+srv://Shriyansh:eb0Q3dK7SPn0iSqM@cluster0.gpzb5.mongodb.net/tailnode?retryWrites=true&w=majority"
+    password = os.getenv("DB_PASSWORD")
+    user = os.getenv("DB_USER")
+    # Provide the mongodb atlas url to connect python to mongodb using pymongo
+    CONNECTION_STRING = f"mongodb+srv://{user}:{password}@cluster0.gpzb5.mongodb.net/tailnode?retryWrites=true&w=majority"
     client = MongoClient(CONNECTION_STRING, tlsCAFile = certifi.where())
     print("Database Connected")
     return client['tailnode']
