@@ -3,12 +3,15 @@ import certifi
 import requests
 import sys
 from time import sleep
-# from  progress_bar import display_progress_bar,printProgressBar
+import os
+from dotenv import load_dotenv 
+load_dotenv()
 
 def get_database():
-
+    password = os.getenv("DB_PASSWORD")
+    user = os.getenv("DB_USER")
     # Provide the mongodb atlas url to connect python to mongodb using pymongo
-    CONNECTION_STRING = "mongodb+srv://Shriyansh:eb0Q3dK7SPn0iSqM@cluster0.gpzb5.mongodb.net/tailnode?retryWrites=true&w=majority"
+    CONNECTION_STRING = f"mongodb+srv://{user}:{password}@cluster0.gpzb5.mongodb.net/tailnode?retryWrites=true&w=majority"
     client = MongoClient(CONNECTION_STRING, tlsCAFile = certifi.where())
     return client['tailnode']
     
